@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta name="robots" content="noindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poncan Productions</title>
+    <style>
+       html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden; /* Prevents horizontal scroll */
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .logo-container img {
+            width: 256px;
+            height: 256px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .card {
+            background-color: #8B0000;
+            width: 100%;
+            min-height: 60px;
+            border-radius: 15px;
+            padding: 20px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-sizing: border-box; /* Includes padding in width */
+        }
+
+        .card-header {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .card-text {
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: center;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .card-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .card.expanded .card-text,
+        .card.expanded .card-content {
+            max-height: none;
+        }
+
+        .card.expanded {
+            min-height: none;
+        }
+
+        .card.always-expanded {
+            min-height: none;
+            cursor: default;
+        }
+
+        .card.always-expanded .card-text,
+        .card.always-expanded .card-content {
+            max-height: none;
+        }
+		
+        .special-card.expanded {
+            min-height: none;
+        }
+
+        .special-card.expanded .card-text {
+            max-height: none;
+        }
+
+        .special-card.expanded .card-content {
+            max-height: none; /* idk what I'm doing */
+            align-items: center;
+        }
+
+        .special-card .figure-section {
+            display: none;
+            width: 100%;
+            text-align: center;
+        }
+
+        .special-card.expanded .figure-section {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .special-card .figure-header {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .special-card .figure-text {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .special-card img {
+            width: 100%;
+            max-height: 300px; /* This can be changed, if you want BIGGER images, but just keep it as is, honestly */
+            object-fit: contain;
+            border-radius: 10px;
+            cursor: default; /* Prevents pointer cursor on images */
+        }
+
+        .footer-container {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            width: 100%;
+            max-width: 800px;
+            margin-top: 10px;
+        }
+
+        .footer-card {
+            background-color: #8B0000;
+            flex: 1;
+            min-height: 150px;
+            border-radius: 15px;
+            padding: 20px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        .footer-card .card-header {
+            font-size: 20px;
+        }
+
+        .footer-card .card-text {
+            font-size: 14px;
+            max-height: none;
+        }
+    </style>
+<body>
+    <div class="logo-container">
+        <img src="https://iili.io/3oWeNV9.png" alt="Poncan Productions"> <!-- THE LOGO -->
+    </div>
+	
+	<div class="container">
+    <div class="card always-expanded"> <!-- Tag to make this card NEVER EVER expand with a mouse click, just leave it as is -->
+        <div class="card-header">Welcome to our website!</div>
+        <div class="card-text"> <p>This website will be about our stream.</p></div>
+        <div class="card-content">
+			<p>Syd Evillaruel</p>
+			<p>Karl Evangelista</p>
+			<p>Cedrick Aguillon</p>
+			<p>Kyla</p>
+			<p>Jazzer</p>
+			<p>Mark Malwat</p>
+        </div>
+    </div>
+	
+    <div class="container">
+        <div class="card">
+            <div class="card-header">Summary of the Stream</div>
+            <div class="card-content">
+                <p>This stream investigates the correlation between peer
+ relationships and academic engagement among grade 10 students at APEC 
+Schools.  The study examines various aspects of peer interactions, 
+including positive ones like collaborative learning and negative impacts
+ such as peer pressure and bullying. Our stream provides insights into 
+fostering positive peer relationships, benefiting both students and 
+adults in various settings by offering strategies for building and 
+maintaining healthy connections. And we also learned about effective 
+marketing strategies; how you communicate with the students, and also 
+promoting our live stream.
+</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">Stream Advantages</div>
+            <div class="card-content">
+              <p> Viewer engagement - We believe that this is one of our
+ group’s strengths as our group can communicate not only through our 
+members but also our viewers making them feel more comfortable and 
+welcomed to our stream. The more viewers feel comfortable with us, the 
+more comfortable the environment of the stream becomes which can cause 
+positive growths. Not only could our stream give opportunity for our 
+viewers to learn and grow along with us with our topics, they can also 
+help us to learn and grow through questions. 
+
+                </p><p>Adaptation - This is one of our group’s strengths
+ as our group was met with several obstacles. So we were able to 
+formulate alternatives while still maintaining a positive attitude for 
+the stream. Keeping the viewers engaged rather than them leaving our 
+stream. 
+</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">Areas of Improvement</div>
+            <div class="card-content">
+                <p>Content collabs and a consistent streaming schedule 
+allows for audience engagement and the potential for new viewers. 
+Engaging with an audience and building a community creates that more 
+personal connection that makes people want to come back for more. The 
+more one streams, the more opportunity there is to view content, and 
+thus more sets of eyes can be on the channel. Professionalism is created
+ by professional equipment; clean sound and visuals create digestible, 
+refined experiences. Recognition and entertainment comes from a visible 
+branding experience compounded by collaborations.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">Marketing and Engagement</div>
+            <div class="card-content">
+                <p>Around a week before the planned stream date, we 
+created a poster and placed it outside the door of 10-2. This was our 
+physical poster for advertising our stream and we focused more of our 
+marketing efforts on social media. One day before the stream several of 
+our group members posted our poster on social media, advertising it to 
+friends and family. Finally, on the day of the stream, we sent an email 
+announcing to all grade levels in V. Luna that our live stream was up 
+and running.
+
+During our live stream, we had some decent viewer engagement. According 
+to our Twitch analytics, we had 3 chat message spikes of activity 
+throughout the entire stream. We also gained 7 new followers over the 
+whole stream, which means that some viewers are ready to return to our 
+stream whenever we stream again. Overall, we had decent success with 
+marketing and engagement, as we had most of our viewers and followers 
+come from our direct advertising according to the statistics.
+</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">Performance Analysis</div>
+            <div class="card-content">
+                <p>Over the course of our entire stream, there was a 
+consistent average of around 10 viewers. It’s somewhere in the middle 
+where I consider to be high or low for viewership. I consider single 
+digits like 5 viewers to be “low viewership”, whereas I consider double 
+digits like 15+ viewers to be “high viewership”. And we had a total of 
+59 unique viewers that interacted with our livestream.
+
+According to our Twitch channel’s overview, we had a peak viewership of 
+19 viewers, which roughly stayed consistent during the whole time. 
+Unfortunately due to connection problems that popped up in the middle of
+ streaming, there was a slight decrease in live viewers according to our
+ graph. Interestingly, we had a spike in average viewers right before we
+ lost connection, and had another spike in average viewers right after 
+our stream came back online. I believe that as a whole, we had pretty 
+decent viewership count, considering we had a lackluster promotion 
+strategy that resulted in viewers having little time to prepare time to 
+watch our premiere livestream.
+</p>
+            </div>
+        </div>
+		
+        <div class="card special-card">
+            <div class="card-header">Appendix</div>
+            <div class="card-text"><p>According to our Twitch channel’s 
+overview, we had a peak viewership of 19 viewers, which roughly stayed 
+consistent during the whole time. Unfortunately due to connection 
+problems that popped up in the middle of streaming, there was a slight 
+decrease in live viewers according to our graph. Interestingly, we had a
+ spike in average viewers right before we lost connection, and had 
+another spike in average viewers right after our stream came back 
+online. I believe that as a whole, we had pretty decent viewership 
+count, considering we had a lackluster promotion strategy that resulted 
+in viewers having little time to prepare time to watch our premiere 
+livestream.
+</p></div>
+            <div class="card-content">
+                <div class="figure-section">
+                    <div class="figure-header">Figure I</div>
+                    <div class="figure-text">Text</div>
+                    <img src="https://iili.io/3oWevcb.png" alt="Figure I Image">
+                </div>
+                <div class="figure-section">
+                    <div class="figure-header">Figure II</div>
+                    <div class="figure-text">Text</div>
+                    <img src="https://iili.io/3oWe8Sj.png" alt="Figure II Image">
+                </div>
+                <div class="figure-section">
+                    <div class="figure-header">Figure III</div>
+                    <div class="figure-text">Text</div>
+                    <img src="https://iili.io/3oWeXN2.png" alt="Figure III Image">
+                </div>
+                <div class="figure-section">
+                    <div class="figure-header">Figure IV</div>
+                    <div class="figure-text">Text</div>
+                    <img src="https://iili.io/3oWehtS.png" alt="Figure IV Image">
+                </div>
+                <div class="figure-section">
+                    <div class="figure-header">Figure V</div>
+                    <div class="figure-text">Text</div>
+                    <img src="https://iili.io/3oWekKu.png" alt="Figure V Image">
+                </div>
+            </div>
+        </div>
+    </div>
+	
+    <div class="footer-container">
+        <div class="footer-card">
+            <div class="card-header">About Us</div>
+            <div class="card-text">Made in 2025. Poncan Productions. We are Group 4 from APEC schools and we are grade 10 from section 10-2.
+
+</div>
+        </div>
+        <div class="footer-card">
+            <div class="card-header">Members</div>
+            <div class="card-text"><p>Cedrick</p><p>Karl</p><p>Syd</p><p>Kyla</p><p>Mark</p></div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.card:not(.always-expanded)').forEach(card => {
+            card.addEventListener('click', (e) => {
+                const isExpanded = card.classList.contains('expanded');
+                if (e.target.tagName !== 'IMG') {   // Only toggle if not clicking an image
+                    card.classList.toggle('expanded');
+                    if (!isExpanded) {
+                        setTimeout(() => {
+                            const scrollPosition = card.classList.contains('special-card') ? 'start' : 'center'; // Scroll to top for special-card, center for others
+                            card.scrollIntoView({
+                                behavior: 'smooth',
+                                block: scrollPosition
+                            });
+                        }, 300); // 300ms, in order to account for animations. IF YOU ARE CHANGING THE ANIMATION SPEED, CHANGE THIS!!!
+                    }
+                }
+            });
+        });
+    </script>
+
+</div></body></html>
